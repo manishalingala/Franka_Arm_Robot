@@ -48,6 +48,5 @@ def perform_trajectory():
     rospy.sleep(1)
 
     trajectory_publisher.publish(trajectory_msg)
-
 if __name__ == '__main__':
     perform_trajectory()
