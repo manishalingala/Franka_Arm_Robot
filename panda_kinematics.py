@@ -38,8 +38,7 @@ class PandaWithPumpKinematics(PandaKinematics):
         solution = super().ik(initial_joint_positions, position, orientation_quat)
 
         if solution is not None:
-            # When not using the hand, we need to remove 45 degrees from the
-            # last joint. See discussion in README of the kinematics repo.
+            # When not using the hand, we need to remove 45 degrees from the last joint. 
             solution[-1] -= 0.785398
 
         return solution
